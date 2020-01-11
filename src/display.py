@@ -19,12 +19,12 @@ class Display:
             for green in range(0,256,0x33):
                 for blue in range(0,256,0x33):
                     self.palette[index] = pygame.Color(red,green,blue)
+                    
                     index += 1
         
     def renderFrame(self, data):     
         for y in range(256):
             for x in range(256):
-                
                 gfxdraw.pixel(self.surface,x,y,self.palette[data[(y * 256) + x]])
                 
                 pygame.display.update()

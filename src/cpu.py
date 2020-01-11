@@ -32,8 +32,11 @@ class Cpu:
 
     def step(self):
         AAA = self.read(self.programCounter) << 0x10 | self.read(self.programCounter + 0x01) << 0x08 | self.read(self.programCounter + 0x02)
+        
         BBB = self.read(self.programCounter + 0x03) << 0x10 | self.read(self.programCounter + 0x04) << 0x08 | self.read(self.programCounter + 0x05)
+        
         CCC = self.read(self.programCounter + 0x06) << 0x10 | self.read(self.programCounter + 0x07) << 0x08 | self.read(self.programCounter + 0x08)
 
         self.write(BBB,self.read(AAA))
+        
         self.programCounter = CCC

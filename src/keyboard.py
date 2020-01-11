@@ -41,4 +41,5 @@ class Keyboard:
             if event.type == pygame.KEYUP:
                 if self.keyMap.get(event.key) != None:
                     self.keys[self.keyMap.get(event.key)] = False
+        
         return self.keys
