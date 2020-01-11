@@ -4,7 +4,7 @@ BytePusher Virtual Machine created in Python using Pygame and Numpy
 
 ## Description
 
-BytePusher is a small VM with a one instruction set ByteByteJump CPU, 16 Mib RAM, 16 key keyboard (like Chip8), 256x256 Display, and 8-bit mono sampled sound. This is an implementation created in Python to get me started with the language.
+BytePusher is a small VM with a one instruction set ByteByteJump CPU, 16 MiB RAM, 16 key keyboard (like Chip8), 256x256 Display, and 8-bit mono sampled sound. This is an implementation created in Python to get me started with the language.
 
 You can read more about it here: https://esolangs.org/wiki/BytePusher
 
