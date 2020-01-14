@@ -21,8 +21,8 @@ You can read more about it here: https://esolangs.org/wiki/BytePusher
 
 ### Dependencies
 
-* Python 2.7 (not tested on other versions)
-* Numpy 1.16.6 (not tested on other versions)
+* Python 3.6.9 (not tested on other versions)
+* Numpy 1.18.1 (not tested on other versions)
 * Pygame 1.9.6 (not tested on other versions)
 
 Built and run Linux Mint 19.3 running Linux 5.3.0-24
