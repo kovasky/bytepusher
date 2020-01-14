@@ -11,7 +11,7 @@ class Cpu:
         
         if len(temp) <= len(self.memory):
             for i in range(len(temp)):
-                self.memory[i] = numpy.fromstring(temp[i], dtype='uint8')
+                self.memory[i] = temp[i]
         
     def read(self,location):
         return self.memory[location]
