@@ -12,7 +12,7 @@ You can read more about it here: https://esolangs.org/wiki/BytePusher
 
 <table>
   <tr>
-    <td><img src="img/nyan.png"></td>
+    <td><img src="img/bpvm.gif"></td>
     <td><img src="img/palette.png"></td>
   </tr>
 </table>
