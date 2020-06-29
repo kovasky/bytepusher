@@ -7,9 +7,11 @@ class Display:
 
         pygame.display.set_caption('BytePusher by Kovasky Buezo')
         
-        self.screen = pygame.display.set_mode((256,256))
+        self.screen = pygame.display.set_mode((512,512))
 
-        self.surface = pygame.display.get_surface()
+        self.surface = pygame.Surface((256,256))
+
+        self.pixelArray = pygame.PixelArray(self.surface)
 
         self.palette = [pygame.Color(0,0,0)] * 256
 
@@ -25,6 +27,7 @@ class Display:
     def renderFrame(self, data):     
         for y in range(256):
             for x in range(256):
-                gfxdraw.pixel(self.surface,x,y,self.palette[data[(y * 256) + x]])
+                self.pixelArray[x][y] = self.palette[data[(y * 256) + x]]
                 
-                pygame.display.update()
+        pygame.transform.scale2x(self.surface, self.screen)
+        pygame.display.update()

@@ -13,23 +13,24 @@ class BytePusher:
 
         self.display = Display()
 
+        self.keyData = numpy.array([0] * 0x02, dtype='uint8')
+
     def loadRom(self,romLocation):
         self.cpu.loadRom(romLocation)
 
     def run(self):
         while True:
                 keys = self.keyboard.getKeys()
-
-                keyData = numpy.array([0] * 0x02, dtype='uint8')
+                self.keyData[0],self.keyData[1] = 0,0
 
                 for dataIndex in range(1):
                     for keyIndex in range(7):
                         if keys[keyIndex + (0x8 * dataIndex)] == True:
-                            keyData[dataIndex] = keyData[dataIndex] | (0x1 << (keyIndex))
+                            self.keyData[dataIndex] = self.keyData[dataIndex] | (0x1 << (keyIndex))
 
-                self.cpu.write(0x00,keyData[0x1])
+                self.cpu.write(0x00,self.keyData[0x1])
 
-                self.cpu.write(0x01,keyData[0x0])
+                self.cpu.write(0x01,self.keyData[0x0])
 
                 self.cpu.resetProgramCounter()
 

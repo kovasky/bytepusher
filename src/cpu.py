@@ -20,12 +20,7 @@ class Cpu:
         self.memory[location] = data
 
     def copyDisplayMem(self,location):
-        displayMem = numpy.array([0] * (256*256), dtype='uint8')
-
-        for i in range((256*256)):
-            displayMem[i] = self.memory[location + i]
-
-        return displayMem
+        return self.memory[location:]
 
     def resetProgramCounter(self):
         self.programCounter = numpy.uint32(self.read(2) << 0x10 | self.read(3) << 0x08 | self.read(4))
