@@ -1,5 +1,6 @@
 #include "include/cpu.h"
 #include "include/display.h"
+#include <SDL2/SDL.h>
 
 int main(int argc, char *argv[])
 {
@@ -9,17 +10,17 @@ int main(int argc, char *argv[])
 	bool quit = false;
 	SDL_Event event;
 
-    while(!quit)
+	while (!quit)
 	{
-        if( SDL_PollEvent( &event ) )
-        {
-            if( event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE )
-            {
-                quit = true;
-            }
-        }
+		if (SDL_PollEvent(&event))
+		{
+			if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+			{
+				quit = true;
+			}
+		}
 
-		for(auto i = 0; i < 0x10000; i++)
+		for (auto i = 0; i < 0x10000; i++)
 		{
 			cpu->step();
 		}
