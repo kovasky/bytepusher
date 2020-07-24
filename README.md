@@ -1,6 +1,6 @@
 # BytePusher Virtual Machine
 
-BytePusher Virtual Machine created in Python using Pygame and Numpy
+BytePusher Virtual Machine created in Python using Pygame and Numpy; in C++ using SDL2.
 
 ## Description
 
@@ -20,17 +20,28 @@ You can read more about it here: https://esolangs.org/wiki/BytePusher
 ## Getting Started
 
 ### Dependencies
-
+<ins>Python</ins>
 * Python 3.6.9 (not tested on other versions)
 * Numpy 1.18.1 (not tested on other versions)
 * Pygame 1.9.6 (not tested on other versions)
+
+<ins>C++</ins>
+* C++11
+* cmake 3.5
+* SDL2  2.0.12
 
 Built and run Linux Mint 19.3 running Linux 5.3.0-24
 
 ### Executing program
 
 ```
-python3 main.py romLocation
+python3 src/py/main.py romLocation
+```
+
+```
+cmake CMakeLists.txt
+make
+./bytepusher romLocation
 ```
 
 ## To Do

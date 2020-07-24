@@ -17,7 +17,8 @@ class Cpu:
         return self.memory[location]
 
     def write(self,location,data): #write to memory
-        self.memory[location] = data
+        if location < len(self.memory):
+            self.memory[location] = data 
 
     def copyDisplayMem(self,location):
         return self.memory[location:]
