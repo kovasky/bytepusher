@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall   CMakeFiles/bytepusher.dir/src/cpp/cpu.cpp.o CMakeFiles/bytepusher.dir/src/cpp/display.cpp.o CMakeFiles/bytepusher.dir/src/cpp/main.cpp.o  -o bytepusher  -lSDL2 

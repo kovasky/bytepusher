@@ -30,6 +30,13 @@ You can read more about it here: https://esolangs.org/wiki/BytePusher
 * cmake 3.5
 * SDL2  2.0.12
 
+<ins>Swig</ins>
+* Swig 4.0.1
+* C++11
+* Python 3.6.9
+* Numpy 1.18.1 (not tested on other versions)
+* Pygame 1.9.6 (not tested on other versions)
+
 Built and run Linux Mint 19.3 running Linux 5.3.0-24
 
 ### Executing program
