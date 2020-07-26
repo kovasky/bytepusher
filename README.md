@@ -42,13 +42,18 @@ Built and run Linux Mint 19.3 running Linux 5.3.0-24
 ### Executing program
 
 ```
-python3 src/py/main.py romLocation
+python3 main.py romLocation
 ```
 
 ```
 cmake CMakeLists.txt
 make
 ./bytepusher romLocation
+```
+
+```
+make
+python3 main.py romLocation
 ```
 
 ## To Do
