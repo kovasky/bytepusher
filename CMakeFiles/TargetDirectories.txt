@@ -1,3 +1,0 @@
-/home/kova/Documents/git/bytepusher/CMakeFiles/rebuild_cache.dir
-/home/kova/Documents/git/bytepusher/CMakeFiles/edit_cache.dir
-/home/kova/Documents/git/bytepusher/CMakeFiles/bytepusher.dir
